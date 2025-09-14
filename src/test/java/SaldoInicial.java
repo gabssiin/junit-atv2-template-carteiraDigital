@@ -22,10 +22,9 @@ class SaldoInicial {
 
     @Test
     void deveLancarExcecaoParaSaldoInicialNegativo() {
-    IllegalArgumentException excecao = assertThrows(IllegalArgumentException.class,
+        IllegalArgumentException excecao = assertThrows(IllegalArgumentException.class,
                 () -> new DigitalWallet("a", -1));
-            Assertions.assertEquals("Negative initial balance", excecao.getMessage());
-            }
-
+        Assertions.assertEquals("Negative initial balance", excecao.getMessage());
+    }
 
 }
